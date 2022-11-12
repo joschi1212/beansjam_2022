@@ -16,6 +16,10 @@ func _on_item_removed_from_line(item):
 
 # Adds item to this assembly line
 func add_item_to_line(item):
-	item.connect("item_at_end_of_line", self, "_on_item_at_end_of_line")
-	item.set_eight_on_line_remaining(self.length)
+	var parent = item.get_parent()
+	if(parent):
+		parent.remove_child(item)
 	add_child(item)
+	item.connect("item_at_end_of_line", self, "_on_item_at_end_of_line")
+	item.set_eighth_on_line_remaining(self.length)
+

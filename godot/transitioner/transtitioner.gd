@@ -22,13 +22,13 @@ func _ready():
 	Events.connect("eighth_note", self, "_on_eighth_note")
 
 func _on_item_at_end_of_line_A(item):
-	if connect_A_to is AssemblyLineOut.X:
+	if connect_A_to == AssemblyLineOut.X:
 		_assembly_line_out_X.add_item_to_line(item)
 	else:
 		_assembly_line_out_Y.add_item_to_line(item)
 
 func _on_item_at_end_of_line_B(item):
-	if connect_B_to is AssemblyLineOut.X:
+	if connect_B_to == AssemblyLineOut.X:
 		_assembly_line_out_X.add_item_to_line(item)
 	else:
 		_assembly_line_out_Y.add_item_to_line(item)

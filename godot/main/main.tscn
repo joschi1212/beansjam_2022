@@ -32,18 +32,22 @@ script = ExtResource( 2 )
 current = true
 
 [node name="AssemblyLine1" parent="." instance=ExtResource( 3 )]
+length = 8
 
 [node name="AssemblyLine2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 192, 0 )
 curve = SubResource( 1 )
+length = 10
 
 [node name="AssemblyLine3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 256, -64 )
 curve = SubResource( 2 )
+length = 8
 
 [node name="AssemblyLine4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -320, -64 )
 curve = SubResource( 3 )
+length = 9
 
 [node name="Spawner" parent="." instance=ExtResource( 5 )]
 position = Vector2( -320, -192 )

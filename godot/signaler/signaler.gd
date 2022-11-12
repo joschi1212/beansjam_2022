@@ -10,7 +10,6 @@ func _ready():
 	add_child(_timer_eighth_note)
 	add_child(_timer_new_tact)
 	
-	
 	_timer_eighth_note.connect("timeout", self, "_on_eighth_note_timeout")
 	_timer_eighth_note.set_wait_time(bpm / 60.0)
 	_timer_eighth_note.set_one_shot(false)
