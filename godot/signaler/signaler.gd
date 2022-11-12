@@ -1,6 +1,6 @@
 extends Node
 
-export(int) var bpm = 30
+export(int) var bpm = 100
 var bps = bpm / 60.0
 
 func _ready():
@@ -26,10 +26,6 @@ func _ready():
 	_timer_quarter_note.start()
 	_timer_eighth_note.start()
 	_timer_new_tact.start()
-	
-	Events.emit_signal("quarter_note")
-	Events.emit_signal("eighth_note")
-	Events.emit_signal("new_tact")
 	
 	Global.eighth_note_duration = 0.5 / bps
 
