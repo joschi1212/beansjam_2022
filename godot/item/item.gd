@@ -9,6 +9,9 @@ onready var _unit_stepsize = 0.0
 
 signal item_at_end_of_line(item)
 
+onready var bpm = 60.0
+onready var bps = bpm/60.0
+
 func _ready():
 	Events.connect("quarter_note", self, "_on_quarter_note")
 	Events.connect("eighth_note", self, "_on_eighth_note")
@@ -17,6 +20,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#set_unit_offset(lerp(get_unit_offset(), get_unit_offset() + _unit_stepsize, delta / _unit_stepsize))
 	pass
 
 func _on_quarter_note():
@@ -31,7 +35,13 @@ func _on_eighth_note():
 	$Sprite/EighthNotesLabel.set_text(str(eighth_notes))
 	if(eighth_on_line_remaining > 0):
 		# move item
-		set_unit_offset(get_unit_offset() + _unit_stepsize)
+		var tween = Tween.new()
+		add_child(tween)
+		tween.interpolate_property(self, "unit_offset", get_unit_offset(), 
+		get_unit_offset() + _unit_stepsize, 0.5 / bps, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+		tween.start()
+		pass
+		# set_unit_offset(get_unit_offset() + _unit_stepsize)
 
 func _on_new_tact():
 	tacts += 1
