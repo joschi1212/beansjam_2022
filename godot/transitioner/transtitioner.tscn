@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://transitioner/transtitioner.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.631285, 1 )
+colors = PoolColorArray( 0.248413, 0.722656, 0.60039, 1, 0.331806, 0.933594, 0.280807, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture2D" id=1]
+gradient = SubResource( 2 )
+fill_from = Vector2( 0.470833, 0.520833 )
+
+[node name="Transtitioner" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 1 )
