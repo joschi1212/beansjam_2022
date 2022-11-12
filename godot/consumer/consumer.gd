@@ -1,9 +1,10 @@
 extends Node2D
 
-export(NodePath) var assembly_line_in
+export(Array, NodePath) var assembly_lines_in
 
 func _ready():
-	get_node(assembly_line_in).connect("item_at_end_of_line", self, "_on_item_at_end_of_line")
+	for ali in assembly_lines_in:
+		get_node(ali).connect("item_at_end_of_line", self, "_on_item_at_end_of_line")
 
 func _on_item_at_end_of_line(item):
 	item.get_parent().remove_child(item)
