@@ -2,6 +2,7 @@ extends Node2D
 
 onready var _area2d = $Area2D
 onready var _work_duration_timer = $WorkDurationTimer
+onready var _key_input = $KeyInput
 
 export(String) var station_input_action = "station_a"
 export(String) var station_input_label = "A"
@@ -9,9 +10,8 @@ export(String) var station_input_label = "A"
 var _working = false
 
 func _ready():
-	var key_input = $KeyInput
-	key_input.set_station_input_action(station_input_label, station_input_action)
-	key_input.connect("key_pressed", self, "_on_key_input_pressed")
+	_key_input.set_station_input_action(station_input_label, station_input_action)
+	_key_input.connect("key_pressed", self, "_on_key_input_pressed")
 	
 	_work_duration_timer.set_one_shot(true)
 	_work_duration_timer.connect("timeout", self, "_on_workduration_timeout")
