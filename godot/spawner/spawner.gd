@@ -12,7 +12,7 @@ func _ready():
 	var item = _item_scene.instance() 
 	_assembly_line_out.add_item_to_line(item)
 
+
 func _on_new_tact():
-	var item = _item_scene.instance() 
-	_assembly_line_out.add_item_to_line(item)
+	_assembly_line_out.add_item_to_line(_item_scene.instance())
 
