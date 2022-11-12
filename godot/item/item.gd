@@ -32,7 +32,7 @@ func _on_quarter_note():
 
 func _on_eighth_note():
 	eighth_notes += 1
-	eighth_on_line_remaining -= 1
+
 	$Sprite/StepsLeftLabel.set_text(str(eighth_on_line_remaining))
 	if(eighth_on_line_remaining == 0):
 		emit_signal("item_at_end_of_line", self)
@@ -44,8 +44,8 @@ func _on_eighth_note():
 		tween.interpolate_property(self, "unit_offset", get_unit_offset(), 
 		get_unit_offset() + _unit_stepsize, Global.eighth_note_duration, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 		tween.start()
-		pass
-		# set_unit_offset(get_unit_offset() + _unit_stepsize)
+		
+	eighth_on_line_remaining -= 1
 
 func _on_new_tact():
 	tacts += 1
