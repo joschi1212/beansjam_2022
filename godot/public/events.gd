@@ -2,8 +2,8 @@ extends Node
 
 ##########################################
 # Signaler ###############################
-signal whole_tone()
-signal halve_tone()
+signal halve_note()
+signal quarter_note()
 signal new_tact()
 
 
