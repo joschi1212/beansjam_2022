@@ -30,6 +30,8 @@ func _ready():
 	Events.emit_signal("quarter_note")
 	Events.emit_signal("eighth_note")
 	Events.emit_signal("new_tact")
+	
+	Global.eighth_note_duration = 0.5 / bps
 
 func _on_quarter_note_timeout():
 	Events.emit_signal("quarter_note")
