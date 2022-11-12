@@ -2,7 +2,9 @@ extends Node
 
 ##########################################
 # Signaler ###############################
-signal beat()
+signal whole_tone()
+signal halve_tone()
+signal new_tact()
 
 
 
