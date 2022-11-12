@@ -4,7 +4,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array(  )
+"points": PoolVector2Array( 0, 0, 0, 0, -320, -192, 0, 0, 0, 0, -320, -64, 0, 0, 0, 0, -192, -64, 0, 0, 0, 0, -192, 64, 0, 0, 0, 0, -64, 64 )
 }
 
 [node name="AssemblyLine" type="Path2D"]
