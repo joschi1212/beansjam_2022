@@ -1,20 +1,20 @@
 extends Path2D
 
 # Emitted when item is ready for pickup
-signal itemAtEndOfLine(item)
+signal item_at_end_of_line(item)
 
-export var length : int # length in quarter notes
+export var length : int # length in eigtht notes
 
 func _ready():
-	self.connect("child_exiting_tree", self, "_onItemRemovedFromLine")
+	self.connect("child_exiting_tree", self, "_on_item_removed_from_line")
 
-func _onItemAtEndOfLine(item):
-	emit_signal("itemAtEndOfLine", item)
+func _on_item_at_end_of_line(item):
+	emit_signal("item_at_end_of_line", item)
 
-func _onItemRemovedFromLine(item):
-	item.disconnect("itemAtEndOfLine", self, "_onItemAtEndOfLine")
+func _on_item_removed_from_line(item):
+	item.disconnect("item_at_end_of_line", self, "_on_item_at_end_of_line")
 
 # Adds item to this assembly line
-func addItemToLine(item):
-	item.connect("itemAtEndOfLine", self, "_onItemAtEndOfLine")
+func add_item_to_line(item):
+	item.connect("item_at_end_of_line", self, "_on_item_at_end_of_line")
 	add_child(item)
