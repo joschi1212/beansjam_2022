@@ -9,7 +9,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -64, 0, 0, 0, 0, 0, -128, 0, 0, 0, 0, 0, -128, -64, 0, 0, 0, 0, -128, -128, 0, 0, 0, 0, -128, -192, 0, 0, 0, 0, -192, -192, 0, 0, 0, 0, -192, -128, 0, 0, 0, 0, -256, -128, 0, 0, 0, 0, -256, 64 )
+"points": PoolVector2Array( 0, 0, 0, 0, -64, 0, 0, 0, 0, 0, -128, 0, 0, 0, 0, 0, -128, -64, 0, 0, 0, 0, -128, -128, 0, 0, 0, 0, -128, -192, 0, 0, 0, 0, -192, -192, 0, 0, 0, 0, -192, -128, 0, 0, 0, 0, -256, -128, 0, 0, 0, 0, -256, 128 )
 }
 
 [sub_resource type="Curve2D" id=2]
@@ -32,12 +32,12 @@ script = ExtResource( 2 )
 current = true
 
 [node name="AssemblyLine1" parent="." instance=ExtResource( 3 )]
-length = 8
+length = 9
 
 [node name="AssemblyLine2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 192, 0 )
 curve = SubResource( 1 )
-length = 10
+length = 11
 
 [node name="AssemblyLine3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 256, -64 )
