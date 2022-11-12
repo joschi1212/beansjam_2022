@@ -22,6 +22,16 @@ config/windows_native_icon="res://icon.ico"
 Events="*res://public/events.gd"
 Global="*res://public/global.gd"
 
+[global]
+
+linea=false
+
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
+
 [input]
 
 ui_accept={
