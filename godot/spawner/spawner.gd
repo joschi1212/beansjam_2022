@@ -8,4 +8,6 @@ func _ready():
 	Events.connect("new_tact", self, "_on_new_tact")
 
 func _on_new_tact():
-	assembly_line_out.add_child(_item_scene.instance())
+	var item = _item_scene.instance() 
+	assembly_line_out.add_item_to_line(item)
+
