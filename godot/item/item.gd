@@ -4,7 +4,7 @@ onready var quarter_notes : int = 0
 onready var eighth_notes : int = 0
 onready var tacts : int = 0
 
-onready var eighth_on_line_remaining = 0
+onready var eighth_on_line_remaining = 0 setget set_eight_on_line_remaining
 
 func _ready():
 	Events.connect("quarter_note", self, "_on_quarter_note")
@@ -27,7 +27,10 @@ func _on_eighth_note():
 	if(eighth_on_line_remaining == 0):
 		Events.emit_signal("item_at_end_of_line", self)
 	$Sprite/EighthNotesLabel.set_text(str(eighth_notes))
-	
+
 func _on_new_tact():
 	tacts += 1
 	$Sprite/TactsLabel.set_text(str(tacts))
+
+func set_eight_on_line_remaining(length):
+	eighth_on_line_remaining = length
