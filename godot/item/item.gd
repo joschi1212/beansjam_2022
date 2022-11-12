@@ -1,11 +1,11 @@
 extends PathFollow2D
 
-onready var quarter_notes : int = 0
-onready var eighth_notes : int = 0
-onready var tacts : int = 0
+var quarter_notes : int = 0
+var eighth_notes : int = 0
+var tacts : int = 0
 
-onready var eighth_on_line_remaining = 0
-onready var _unit_stepsize = 0.0
+var eighth_on_line_remaining = 0
+var _unit_stepsize = 0.0
 
 signal item_at_end_of_line(item)
 
@@ -42,7 +42,7 @@ func _on_eighth_note():
 		var tween = Tween.new()
 		add_child(tween)
 		tween.interpolate_property(self, "unit_offset", get_unit_offset(), 
-		get_unit_offset() + _unit_stepsize, Global.eighth_note_duration, Tween.TRANS_LINEAR, Tween.EASE_IN)
+		get_unit_offset() + _unit_stepsize, Global.eighth_note_duration, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 		tween.start()
 		pass
 		# set_unit_offset(get_unit_offset() + _unit_stepsize)
