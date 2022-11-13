@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://signaler/signaler.tscn" type="PackedScene" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://station/station.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/sounds/station1_A3.wav" type="AudioStream" id=8]
 [ext_resource path="res://assets/sounds/wrong.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds/station4_G3.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/station2_C3.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/station3_E3.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/Station5_C2.wav" type="AudioStream" id=13]
 
 [sub_resource type="Curve2D" id=10]
 _data = {
@@ -69,13 +73,66 @@ offset = Vector2( 192, 128 )
 current = true
 zoom = Vector2( 2, 2 )
 
-[node name="Station1" parent="." instance=ExtResource( 7 )]
-position = Vector2( -416, 96 )
+[node name="Map" type="Node2D" parent="."]
+position = Vector2( 32, 0 )
+
+[node name="Station1" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( -456, 352 )
+station_input_action = "station_f"
+station_input_label = "F"
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 12 )
+
+[node name="Station2" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( 768, -288 )
+station_input_action = "station_d"
+station_input_label = "D"
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 10 )
+
+[node name="Station3" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( 256, -288 )
+station_input_action = "station_s"
+station_input_label = "S"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 8 )
 
-[node name="Map" type="Node2D" parent="."]
-position = Vector2( 32, 0 )
+[node name="Station4" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( -136, 32 )
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 11 )
+
+[node name="BStation1" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( 968, 224 )
+station_input_action = "station_space"
+station_input_label = "Space"
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 13 )
+play_wrong_sound = false
+
+[node name="BStation2" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( 440, 224 )
+station_input_action = "station_space"
+station_input_label = "Space"
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 13 )
+play_wrong_sound = false
+
+[node name="BStation3" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( 448, -416 )
+station_input_action = "station_space"
+station_input_label = "Space"
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 13 )
+play_wrong_sound = false
+
+[node name="BStation4" parent="Map" instance=ExtResource( 7 )]
+position = Vector2( 136, -96 )
+station_input_action = "station_space"
+station_input_label = "Space"
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 13 )
+play_wrong_sound = false
 
 [node name="SpawnerGreen" parent="Map" instance=ExtResource( 5 )]
 position = Vector2( -384, -224 )

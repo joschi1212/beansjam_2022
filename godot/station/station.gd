@@ -9,6 +9,8 @@ export(String) var station_input_label = "A"
 export(AudioStream) var wrong_sound: AudioStream
 export(AudioStream) var success_sound: AudioStream
 
+export var play_wrong_sound : bool = true
+
 var _working = false
 
 var audio_player
@@ -25,7 +27,7 @@ func _on_key_input_pressed():
 	if _working:
 		return
 	
-	if _area2d.get_overlapping_areas().empty():
+	if play_wrong_sound and _area2d.get_overlapping_areas().empty():
 		audio_player.play_sound(wrong_sound)
 	
 	for item_area in _area2d.get_overlapping_areas():
