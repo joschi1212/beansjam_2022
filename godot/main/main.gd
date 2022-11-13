@@ -14,7 +14,7 @@ func _on_game_timer():
 	Global.time_left = max(Global.time_left - 1, 0)
 	
 	if Global.time_left == 0:
-		# game is over
+		get_tree().change_scene("res://menu/scoring.tscn")
 		pass
 	
 	Events.emit_signal("time_update")

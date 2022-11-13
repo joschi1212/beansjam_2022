@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://assets/Wizard-Side.png" type="Texture" id=1]
 [ext_resource path="res://assets/Wizard-Front.png" type="Texture" id=2]
@@ -9,23 +9,30 @@
 [ext_resource path="res://assets/swords/Sword_0.png.png" type="Texture" id=7]
 [ext_resource path="res://assets/UI/Start-Selected.png" type="Texture" id=8]
 [ext_resource path="res://assets/UI/Start-Default.png" type="Texture" id=9]
-[ext_resource path="res://menu/menu.gd" type="Script" id=10]
+[ext_resource path="res://menu/scoring.gd" type="Script" id=10]
 [ext_resource path="res://assets/background/cobblestone_column.tres" type="Texture" id=11]
 [ext_resource path="res://tilemaps/BackgroundTileMap.tscn" type="PackedScene" id=12]
 [ext_resource path="res://tilemaps/BeltTileMap.tscn" type="PackedScene" id=13]
+
+[sub_resource type="DynamicFontData" id=22]
+font_path = "res://assets/PixgamerRegular-PKxO2.ttf"
+
+[sub_resource type="DynamicFont" id=23]
+size = 80
+font_data = SubResource( 22 )
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/PixgamerRegular-PKxO2.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 80
+size = 40
 font_data = SubResource( 1 )
 
 [sub_resource type="DynamicFontData" id=20]
 font_path = "res://assets/PixgamerRegular-PKxO2.ttf"
 
 [sub_resource type="DynamicFont" id=21]
-size = 70
+size = 60
 font_data = SubResource( 20 )
 
 [sub_resource type="AtlasTexture" id=3]
@@ -139,7 +146,7 @@ z_index = -1
 tile_data = PoolIntArray( -262152, 0, 65538, -262151, 0, 65538, -262150, 0, 65538, -262149, 0, 65538, -262148, 0, 65538, -262147, 0, 65538, -262146, 0, 65538, -262145, 0, 65538, -327680, 0, 65538, -327679, 0, 65538, -327678, 0, 65538, -327677, 0, 65538, -327676, 0, 65538, -327675, 0, 65538, -327674, 0, 65538, -327673, 0, 65538, -327672, 0, 65538, -196616, 0, 65538, -196615, 0, 65536, -196614, 0, 196609, -196613, 0, 65538, -196612, 0, 65537, -196611, 0, 196610, -196610, 0, 65537, -196609, 0, 65539, -262144, 0, 65536, -262143, 0, 196608, -262142, 0, 196610, -262141, 0, 131074, -262140, 0, 131075, -262139, 0, 196609, -262138, 0, 131072, -262137, 0, 0, -262136, 0, 65538, -131080, 0, 65538, -131079, 0, 0, -131078, 0, 131074, -131077, 0, 65537, -131076, 0, 1, -131075, 0, 196610, -131074, 0, 131072, -131073, 0, 196608, -196608, 0, 65537, -196607, 0, 65538, -196606, 0, 131073, -196605, 0, 131073, -196604, 0, 2, -196603, 0, 131074, -196602, 0, 131075, -196601, 0, 131072, -196600, 0, 65538, -65544, 0, 65538, -65543, 0, 131075, -65542, 0, 65538, -65541, 0, 131072, -65540, 0, 131075, -65539, 0, 65539, -65538, 0, 65536, -65537, 0, 65539, -131072, 0, 3, -131071, 0, 131075, -131070, 0, 131073, -131069, 0, 196610, -131068, 0, 131072, -131067, 0, 196609, -131066, 0, 65537, -131065, 0, 196610, -131064, 0, 65538, -8, 0, 65538, -7, 0, 196610, -6, 0, 131073, -5, 0, 65539, -4, 0, 65537, -3, 0, 2, -2, 0, 65537, -1, 0, 2, -65536, 0, 131073, -65535, 0, 65537, -65534, 0, 196608, -65533, 0, 131074, -65532, 0, 0, -65531, 0, 196610, -65530, 0, 65537, -65529, 0, 196609, -65528, 0, 65538, 65528, 0, 65538, 65529, 0, 196610, 65530, 0, 196610, 65531, 0, 131074, 65532, 0, 0, 65533, 0, 1, 65534, 0, 1, 65535, 0, 65536, 0, 0, 65538, 1, 0, 131072, 2, 0, 131073, 3, 0, 196609, 4, 0, 65536, 5, 0, 65536, 6, 0, 196609, 7, 0, 196610, 8, 0, 65538, 131064, 0, 65538, 131065, 0, 196608, 131066, 0, 196610, 131067, 0, 196610, 131068, 0, 131075, 131069, 0, 65536, 131070, 0, 65539, 131071, 0, 65536, 65536, 0, 0, 65537, 0, 65539, 65538, 0, 65536, 65539, 0, 131073, 65540, 0, 131075, 65541, 0, 196610, 65542, 0, 0, 65543, 0, 131073, 65544, 0, 65538, 196600, 0, 65538, 196601, 0, 131075, 196602, 0, 1, 196603, 0, 131075, 196604, 0, 196609, 196605, 0, 196608, 196606, 0, 196610, 196607, 0, 196608, 131072, 0, 131072, 131073, 0, 131075, 131074, 0, 65538, 131075, 0, 1, 131076, 0, 131072, 131077, 0, 196608, 131078, 0, 0, 131079, 0, 2, 131080, 0, 65538, 262136, 0, 65538, 262137, 0, 65538, 262138, 0, 65539, 262139, 0, 131075, 262140, 0, 65538, 262141, 0, 131072, 262142, 0, 2, 262143, 0, 65537, 196608, 0, 131074, 196609, 0, 0, 196610, 0, 0, 196611, 0, 65538, 196612, 0, 131073, 196613, 0, 131075, 196614, 0, 196610, 196615, 0, 196610, 196616, 0, 65538, 327672, 0, 65538, 327673, 0, 65538, 327674, 0, 65538, 327675, 0, 65538, 327676, 0, 65538, 327677, 0, 65538, 327678, 0, 65538, 327679, 0, 65538, 262144, 0, 65538, 262145, 0, 65538, 262146, 0, 65538, 262147, 0, 65538, 262148, 0, 65538, 262149, 0, 65538, 262150, 0, 65538, 262151, 0, 65538, 262152, 0, 65538 )
 
 [node name="BeltTileMap" parent="." instance=ExtResource( 13 )]
-tile_data = PoolIntArray( -262150, 0, 0, -327675, 7, 0, -196614, 0, 0, -262139, 7, 0, -131078, 0, 0, -196603, 7, 0, -65542, 0, 0, -131067, 7, 0, -6, 0, 0, -65531, 7, 0, 65530, 0, 0, 5, 7, 0, 131066, 0, 0, 65536, 2, 0, 65541, 7, 0, 196602, 0, 0, 131077, 7, 0, 262138, 0, 0, 196613, 7, 0, 327674, 0, 0, 262149, 7, 0 )
+tile_data = PoolIntArray( -262150, 0, 0, -327675, 7, 0, -196614, 0, 0, -262139, 7, 0, -131078, 0, 0, -196603, 7, 0, -65542, 0, 0, -131067, 7, 0, -6, 0, 0, -65531, 7, 0, 65530, 0, 0, 5, 7, 0, 131066, 0, 0, 65541, 7, 0, 196602, 0, 0, 131077, 7, 0, 262138, 0, 0, 196613, 7, 0, 327674, 0, 0, 262149, 7, 0 )
 
 [node name="Control" type="Control" parent="."]
 margin_left = -512.0
@@ -147,16 +154,15 @@ margin_top = -304.0
 margin_right = 512.0
 margin_bottom = 296.0
 
-[node name="TitleLabel" type="Label" parent="Control"]
-margin_left = -8.0
-margin_right = 1016.0
+[node name="Score" type="Label" parent="Control"]
+margin_right = 1024.0
 margin_bottom = 192.0
-custom_fonts/font = SubResource( 2 )
-text = "Enchanted Inc."
+custom_fonts/font = SubResource( 23 )
+text = "0"
 align = 1
 valign = 1
 
-[node name="WizardRight" type="TextureRect" parent="Control/TitleLabel"]
+[node name="WizardRight" type="TextureRect" parent="Control/Score"]
 margin_left = 696.0
 margin_top = 56.0
 margin_right = 784.0
@@ -165,7 +171,7 @@ texture = ExtResource( 1 )
 expand = true
 flip_h = true
 
-[node name="WizardLeft" type="TextureRect" parent="Control/TitleLabel"]
+[node name="WizardLeft" type="TextureRect" parent="Control/Score"]
 margin_left = 232.0
 margin_top = 56.0
 margin_right = 320.0
@@ -173,11 +179,62 @@ margin_bottom = 144.0
 texture = ExtResource( 1 )
 expand = true
 
+[node name="Sword0" type="Label" parent="Control"]
+margin_left = 320.0
+margin_top = 248.0
+margin_right = 384.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Sword1" type="Label" parent="Control"]
+margin_left = 400.0
+margin_top = 248.0
+margin_right = 464.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Sword2" type="Label" parent="Control"]
+margin_left = 480.0
+margin_top = 248.0
+margin_right = 544.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Sword3" type="Label" parent="Control"]
+margin_left = 568.0
+margin_top = 248.0
+margin_right = 632.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Sword4" type="Label" parent="Control"]
+margin_left = 648.0
+margin_top = 248.0
+margin_right = 712.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
 [node name="Wizard Front" type="TextureRect" parent="Control"]
-margin_left = 344.0
-margin_top = 288.0
-margin_right = 664.0
-margin_bottom = 608.0
+margin_left = 688.0
+margin_top = 496.0
+margin_right = 1008.0
+margin_bottom = 816.0
+rect_rotation = -40.8
 texture = ExtResource( 2 )
 expand = true
 
@@ -191,13 +248,12 @@ texture_pressed = ExtResource( 8 )
 expand = true
 stretch_mode = 4
 
-[node name="Start" type="Label" parent="Control/TextureButton"]
-margin_left = 24.0
+[node name="Restart" type="Label" parent="Control/TextureButton"]
 margin_top = 24.0
-margin_right = 190.0
+margin_right = 218.0
 margin_bottom = 95.0
 custom_fonts/font = SubResource( 21 )
-text = "START"
+text = "RESTART"
 align = 1
 valign = 1
 
@@ -206,48 +262,59 @@ margin_left = 416.0
 margin_top = 584.0
 margin_right = 591.0
 margin_bottom = 598.0
+rect_pivot_offset = Vector2( -768, -280 )
 text = "A game by Joschi and Lukas"
 
 [node name="Sword0" type="AnimatedSprite" parent="."]
-position = Vector2( -192, 64 )
-scale = Vector2( 6.375, 6.125 )
+position = Vector2( -160, -72 )
+scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 19 )
 animation = "sword0"
 speed_scale = 2.0
 playing = true
 
 [node name="Sword1" type="AnimatedSprite" parent="."]
-position = Vector2( 192, 64 )
-scale = Vector2( 6.375, 6.125 )
+position = Vector2( -80, -72 )
+scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 19 )
 animation = "sword1"
-frame = 2
 speed_scale = 2.0
 playing = true
 
 [node name="Sword2" type="AnimatedSprite" parent="."]
-position = Vector2( -104, -16 )
-scale = Vector2( 6.375, 6.125 )
+position = Vector2( 0, -72 )
+scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 19 )
 animation = "sword2"
-frame = 1
-speed_scale = 2.0
-playing = true
-
-[node name="Sword3" type="AnimatedSprite" parent="."]
-position = Vector2( 104, -16 )
-scale = Vector2( 6.375, 6.125 )
-frames = SubResource( 19 )
-animation = "sword3"
 frame = 3
 speed_scale = 2.0
 playing = true
 
-[node name="Sword4" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -72 )
-scale = Vector2( 6.375, 6.125 )
+[node name="Sword3" type="AnimatedSprite" parent="."]
+position = Vector2( 88, -72 )
+scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 19 )
-animation = "sword4"
+animation = "sword3"
 frame = 1
 speed_scale = 2.0
 playing = true
+
+[node name="Sword4" type="AnimatedSprite" parent="."]
+position = Vector2( 168, -72 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 19 )
+animation = "sword4"
+frame = 3
+speed_scale = 2.0
+playing = true
+
+[node name="Well Done" type="Label" parent="."]
+margin_left = 272.0
+margin_top = 104.0
+margin_right = 430.0
+margin_bottom = 184.0
+rect_rotation = -22.6
+custom_fonts/font = SubResource( 2 )
+text = "WELL DONE!"
+align = 1
+valign = 1
