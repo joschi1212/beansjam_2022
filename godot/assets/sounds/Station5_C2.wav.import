@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Belt2_C2.wav-e47a12c1f43ea7a52261f350ee8634c5.sample"
+path="res://.import/Station5_C2.wav-6fa77be2842c61cdbd30f0a98e63817a.sample"
 
 [deps]
 
-source_file="res://assets/sounds/Belt2_C2.wav"
-dest_files=[ "res://.import/Belt2_C2.wav-e47a12c1f43ea7a52261f350ee8634c5.sample" ]
+source_file="res://assets/sounds/Station5_C2.wav"
+dest_files=[ "res://.import/Station5_C2.wav-6fa77be2842c61cdbd30f0a98e63817a.sample" ]
 
 [params]
 

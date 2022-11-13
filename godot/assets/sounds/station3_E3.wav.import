@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/station_3E3.wav-f0634c02c4b0bc08eceb73824eb7d001.sample"
+path="res://.import/station3_E3.wav-a57f81af6469966e5e975160f707b9dc.sample"
 
 [deps]
 
-source_file="res://assets/sounds/station_3E3.wav"
-dest_files=[ "res://.import/station_3E3.wav-f0634c02c4b0bc08eceb73824eb7d001.sample" ]
+source_file="res://assets/sounds/station3_E3.wav"
+dest_files=[ "res://.import/station3_E3.wav-a57f81af6469966e5e975160f707b9dc.sample" ]
 
 [params]
 
