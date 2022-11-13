@@ -6,4 +6,5 @@ func _ready():
 	_start_button.connect("button_up", self, "_start_game")
 
 func _start_game():
+	Global.reset_score()
 	get_tree().change_scene("res://main/main.tscn")

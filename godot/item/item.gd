@@ -7,7 +7,7 @@ signal item_at_end_of_line(item)
 
 onready var _upgrade_timer = $UpgradeTimer
 var _upgrading = false
-var _construction_level = 0
+var construction_level = 0
 
 onready var _sword_sprites : AnimatedSprite = $Swords
 
@@ -56,8 +56,8 @@ func start_next_step_upgrade():
 	if _upgrading:
 		return
 	
-	_construction_level += 1
-	_sword_sprites.set_animation("level" + str(_construction_level))
+	construction_level += 1
+	_sword_sprites.set_animation("level" + str(construction_level))
 	
 	_upgrading = true
 	_upgrade_timer.set_wait_time(2 * Global.eighth_note_duration)
