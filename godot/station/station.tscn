@@ -20,7 +20,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 36, 32 )
+extents = Vector2( 26, 24 )
 
 [node name="Station" type="Node2D"]
 script = ExtResource( 1 )
@@ -43,11 +43,11 @@ z_as_relative = false
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Cs2dRight" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 72, 0 )
+position = Vector2( 62, 0 )
 shape = SubResource( 1 )
 
 [node name="Cs2dBottom" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 64 )
+position = Vector2( 0, 56 )
 shape = SubResource( 1 )
 
 [node name="Cs2dLeft" type="CollisionShape2D" parent="Area2D"]
