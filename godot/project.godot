@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "AnimatedTexture",
+"class": "AnimatedTextureSheet",
+"language": "GDScript",
+"path": "res://util/AnimatedTextureSheet.gd"
+} ]
+_global_script_class_icons={
+"AnimatedTextureSheet": ""
+}
+
 [application]
 
 config/name="Game"

@@ -4,6 +4,7 @@ extends Node
 # Signaler ###############################
 signal quarter_note()
 signal eighth_note()
+signal sixtenth_note()
 signal new_tact()
 
 
