@@ -76,7 +76,7 @@ font_path = "res://assets/PixgamerRegular-PKxO2.ttf"
 size = 64
 font_data = SubResource( 11 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource( 18 )
 
 [node name="Signaler" parent="." instance=ExtResource( 2 )]
@@ -92,7 +92,7 @@ position = Vector2( 32, 0 )
 script = ExtResource( 16 )
 
 [node name="Station1" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( -456, 256 )
+position = Vector2( -448, 192 )
 station_input_action = "station_f"
 station_input_label = "F"
 wrong_sound = ExtResource( 9 )
@@ -100,14 +100,15 @@ success_sound = ExtResource( 12 )
 direction = 1
 
 [node name="Station2" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( 760, -264 )
+position = Vector2( 704, 0 )
 station_input_action = "station_d"
 station_input_label = "D"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 10 )
+direction = 1
 
 [node name="Station3" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( 352, -288 )
+position = Vector2( 384, -288 )
 station_input_action = "station_s"
 station_input_label = "S"
 wrong_sound = ExtResource( 9 )
@@ -120,7 +121,7 @@ success_sound = ExtResource( 11 )
 direction = 1
 
 [node name="BStation1" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
-position = Vector2( 968, 224 )
+position = Vector2( 968, 200 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
@@ -137,7 +138,7 @@ play_wrong_sound = false
 direction = 1
 
 [node name="BStation3" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
-position = Vector2( 512, -416 )
+position = Vector2( 480, -424 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
@@ -145,7 +146,7 @@ success_sound = ExtResource( 13 )
 play_wrong_sound = false
 
 [node name="BStation4" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
-position = Vector2( 136, -96 )
+position = Vector2( 136, -128 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
@@ -203,7 +204,7 @@ position = Vector2( -32, 0 )
 [node name="GSegment1" parent="Map/GreenLines" instance=ExtResource( 3 )]
 position = Vector2( 0, -8 )
 curve = SubResource( 10 )
-length = 24
+length = 25
 
 [node name="GSegment2" parent="Map/GreenLines" instance=ExtResource( 3 )]
 curve = SubResource( 1 )
