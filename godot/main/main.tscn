@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://signaler/signaler.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/sounds/Station5_C2.wav" type="AudioStream" id=13]
 [ext_resource path="res://background_tileset.tres" type="TileSet" id=14]
 [ext_resource path="res://assets/background/cobblestone_column.tres" type="Texture" id=15]
+[ext_resource path="res://main/Map.gd" type="Script" id=16]
 
 [sub_resource type="Curve2D" id=10]
 _data = {
@@ -78,6 +79,7 @@ zoom = Vector2( 2, 2 )
 
 [node name="Map" type="Node2D" parent="."]
 position = Vector2( 32, 0 )
+script = ExtResource( 16 )
 
 [node name="Station1" parent="Map" instance=ExtResource( 7 )]
 position = Vector2( -456, 256 )
@@ -108,41 +110,37 @@ wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 11 )
 direction = 1
 
-[node name="BStation1" parent="Map" instance=ExtResource( 7 )]
+[node name="BStation1" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
 position = Vector2( 968, 224 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
-play_wrong_sound = false
 direction = 0
 
-[node name="BStation2" parent="Map" instance=ExtResource( 7 )]
+[node name="BStation2" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
 position = Vector2( 440, 224 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
-play_sound = false
 play_wrong_sound = false
 direction = 1
 
-[node name="BStation3" parent="Map" instance=ExtResource( 7 )]
+[node name="BStation3" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
 position = Vector2( 512, -416 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
-play_sound = false
 play_wrong_sound = false
 
-[node name="BStation4" parent="Map" instance=ExtResource( 7 )]
+[node name="BStation4" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
 position = Vector2( 136, -96 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
-play_sound = false
 play_wrong_sound = false
 direction = 0
 

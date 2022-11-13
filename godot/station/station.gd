@@ -41,8 +41,16 @@ func _on_key_input_pressed():
 	if _working:
 		return
 	
-	if play_wrong_sound and _area2d.get_overlapping_areas().empty():
-		audio_player.play_sound(wrong_sound)
+	if(self.is_in_group("bassStations")):
+		var all_empty = true
+		for bassStation in get_tree().get_nodes_in_group("bassStations"):
+			if not bassStation._area2d.get_overlapping_areas().empty():
+				all_empty = false
+		if all_empty and play_wrong_sound:
+			audio_player.play_sound(wrong_sound)
+	else:
+		if play_wrong_sound and _area2d.get_overlapping_areas().empty():
+			audio_player.play_sound(wrong_sound)
 	
 	for item_area in _area2d.get_overlapping_areas():
 		var item = item_area.get_parent()
