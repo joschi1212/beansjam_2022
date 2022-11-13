@@ -1,0 +1,196 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://assets/Wizard-Side.png" type="Texture" id=1]
+[ext_resource path="res://assets/Wizard-Front.png" type="Texture" id=2]
+[ext_resource path="res://assets/swords/Sword_4.png" type="Texture" id=3]
+[ext_resource path="res://assets/swords/Sword_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/swords/Sword_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/swords/Sword_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/swords/Sword_0.png.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/PixgamerRegular-PKxO2.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = SubResource( 1 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 5 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 5 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "sword0",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "sword1",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "sword2",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "sword3",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "sword4",
+"speed": 4.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Control" type="Control" parent="."]
+margin_left = -512.0
+margin_top = -304.0
+margin_right = 512.0
+margin_bottom = 296.0
+
+[node name="TitleLabel" type="Label" parent="Control"]
+margin_left = -8.0
+margin_right = 1016.0
+margin_bottom = 192.0
+custom_fonts/font = SubResource( 2 )
+text = "Enchanted Inc."
+align = 1
+valign = 1
+
+[node name="WizardRight" type="TextureRect" parent="Control/TitleLabel"]
+margin_left = 696.0
+margin_top = 56.0
+margin_right = 784.0
+margin_bottom = 144.0
+texture = ExtResource( 1 )
+expand = true
+flip_h = true
+
+[node name="WizardLeft" type="TextureRect" parent="Control/TitleLabel"]
+margin_left = 232.0
+margin_top = 56.0
+margin_right = 320.0
+margin_bottom = 144.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Wizard Fron" type="TextureRect" parent="Control"]
+margin_left = 344.0
+margin_top = 288.0
+margin_right = 664.0
+margin_bottom = 608.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Sword0" type="AnimatedSprite" parent="."]
+position = Vector2( -192, 64 )
+scale = Vector2( 6.375, 6.125 )
+frames = SubResource( 19 )
+animation = "sword0"
+speed_scale = 2.0
+playing = true
+
+[node name="Sword1" type="AnimatedSprite" parent="."]
+position = Vector2( 192, 64 )
+scale = Vector2( 6.375, 6.125 )
+frames = SubResource( 19 )
+animation = "sword1"
+speed_scale = 2.0
+playing = true
+
+[node name="Sword2" type="AnimatedSprite" parent="."]
+position = Vector2( -104, -16 )
+scale = Vector2( 6.375, 6.125 )
+frames = SubResource( 19 )
+animation = "sword2"
+frame = 3
+speed_scale = 2.0
+playing = true
+
+[node name="Sword3" type="AnimatedSprite" parent="."]
+position = Vector2( 104, -16 )
+scale = Vector2( 6.375, 6.125 )
+frames = SubResource( 19 )
+animation = "sword3"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="Sword4" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -72 )
+scale = Vector2( 6.375, 6.125 )
+frames = SubResource( 19 )
+animation = "sword4"
+frame = 3
+speed_scale = 2.0
+playing = true
