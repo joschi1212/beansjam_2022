@@ -126,11 +126,11 @@ position = Vector2( -32, 0 )
 
 [node name="GSegment1" parent="Map/GreenLines" instance=ExtResource( 3 )]
 curve = SubResource( 10 )
-length = 24
+length = 23
 
 [node name="GSegment2" parent="Map/GreenLines" instance=ExtResource( 3 )]
 curve = SubResource( 1 )
-length = 18
+length = 17
 
 [node name="GSegment3" parent="Map/GreenLines" instance=ExtResource( 3 )]
 curve = SubResource( 2 )
@@ -142,13 +142,13 @@ length = 9
 
 [node name="GSegment" parent="Map/GreenLines" instance=ExtResource( 3 )]
 curve = SubResource( 4 )
-length = 10
+length = 9
 
 [node name="BlueLines" type="Node2D" parent="Map"]
 
 [node name="BSegment1" parent="Map/BlueLines" instance=ExtResource( 3 )]
 curve = SubResource( 5 )
-length = 26
+length = 25
 
 [node name="BSegment2" parent="Map/BlueLines" instance=ExtResource( 3 )]
 curve = SubResource( 6 )
@@ -156,15 +156,15 @@ length = 10
 
 [node name="BSegment3" parent="Map/BlueLines" instance=ExtResource( 3 )]
 curve = SubResource( 7 )
-length = 12
+length = 11
 
 [node name="BSegment4" parent="Map/BlueLines" instance=ExtResource( 3 )]
 curve = SubResource( 8 )
-length = 6
+length = 5
 
 [node name="BSegment5" parent="Map/BlueLines" instance=ExtResource( 3 )]
 curve = SubResource( 9 )
-length = 14
+length = 13
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 2, 2 )
