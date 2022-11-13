@@ -57,6 +57,7 @@ func _on_key_input_pressed():
 		item.start_next_step_upgrade()
 		if play_sound:
 			audio_player.play_sound(success_sound)
+			$CPUParticles2D.set_emitting(true) 
 	
 	_working = true
 	_work_duration_timer.set_wait_time(Global.eighth_note_duration)

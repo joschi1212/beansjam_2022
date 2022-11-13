@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://station/station.gd" type="Script" id=1]
 [ext_resource path="res://station/key_input.tscn" type="PackedScene" id=2]
@@ -21,6 +21,9 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26, 24 )
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0.897461, 0.105171, 0.105171, 1, 1, 1, 1, 1 )
 
 [node name="Station" type="Node2D"]
 script = ExtResource( 1 )
@@ -55,3 +58,19 @@ position = Vector2( -72, 0 )
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 3 )]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 500
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.9
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 15.0
+direction = Vector2( 0, 0 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 100.0
+color = Color( 0.894118, 0.611765, 0.611765, 1 )
+color_ramp = SubResource( 3 )
