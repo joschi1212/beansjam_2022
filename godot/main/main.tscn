@@ -146,7 +146,7 @@ success_sound = ExtResource( 13 )
 play_wrong_sound = false
 
 [node name="BStation4" parent="Map" groups=["bassStations"] instance=ExtResource( 7 )]
-position = Vector2( 136, -128 )
+position = Vector2( 136, -152 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
