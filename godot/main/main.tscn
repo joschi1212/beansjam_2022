@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://signaler/signaler.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://spawner/spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://transitioner/transtitioner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://station/station.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sounds/station1_A3.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/wrong.wav" type="AudioStream" id=9]
 
 [sub_resource type="Curve2D" id=10]
 _data = {
@@ -67,8 +69,10 @@ offset = Vector2( 192, 128 )
 current = true
 zoom = Vector2( 2, 2 )
 
-[node name="Station" parent="." instance=ExtResource( 7 )]
-position = Vector2( -672, -48 )
+[node name="Station1" parent="." instance=ExtResource( 7 )]
+position = Vector2( -416, 96 )
+wrong_sound = ExtResource( 9 )
+success_sound = ExtResource( 8 )
 
 [node name="Map" type="Node2D" parent="."]
 position = Vector2( 32, 0 )

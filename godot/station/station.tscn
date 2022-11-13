@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://station/station.gd" type="Script" id=1]
 [ext_resource path="res://station/key_input.tscn" type="PackedScene" id=2]
+[ext_resource path="res://audio_stream_player/AudioStreamPlayer.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.27305, 0.294326, 0.549645, 0.56383, 0.638298, 0.663121, 0.893617, 0.925532 )
@@ -41,3 +42,5 @@ shape = SubResource( 1 )
 [node name="Cs2dLeft" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -64, 0 )
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 3 )]

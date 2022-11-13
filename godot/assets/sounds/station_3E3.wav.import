@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/station_3E3.wav-f0634c02c4b0bc08eceb73824eb7d001.sample"
+
+[deps]
+
+source_file="res://assets/sounds/station_3E3.wav"
+dest_files=[ "res://.import/station_3E3.wav-f0634c02c4b0bc08eceb73824eb7d001.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

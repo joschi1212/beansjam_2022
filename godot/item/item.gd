@@ -42,7 +42,8 @@ func _on_eighth_note():
 		var tween = Tween.new()
 		add_child(tween)
 		tween.interpolate_property(self, "unit_offset", get_unit_offset(), 
-		get_unit_offset() + _unit_stepsize, Global.eighth_note_duration, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+		get_unit_offset() + _unit_stepsize, Global.eighth_note_duration, 
+		Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 		tween.start()
 		
 	eighth_on_line_remaining -= 1
