@@ -82,6 +82,7 @@ station_input_action = "station_f"
 station_input_label = "F"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 12 )
+direction = 1
 
 [node name="Station2" parent="Map" instance=ExtResource( 7 )]
 position = Vector2( 768, -288 )
@@ -101,27 +102,30 @@ success_sound = ExtResource( 8 )
 position = Vector2( -136, 32 )
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 11 )
+direction = 1
 
 [node name="BStation1" parent="Map" instance=ExtResource( 7 )]
 position = Vector2( 968, 224 )
 station_input_action = "station_space"
-station_input_label = "Space"
+station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
 play_wrong_sound = false
+direction = 0
 
 [node name="BStation2" parent="Map" instance=ExtResource( 7 )]
 position = Vector2( 440, 224 )
 station_input_action = "station_space"
-station_input_label = "Space"
+station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
 play_wrong_sound = false
+direction = 1
 
 [node name="BStation3" parent="Map" instance=ExtResource( 7 )]
 position = Vector2( 448, -416 )
 station_input_action = "station_space"
-station_input_label = "Space"
+station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
 play_wrong_sound = false
@@ -129,10 +133,11 @@ play_wrong_sound = false
 [node name="BStation4" parent="Map" instance=ExtResource( 7 )]
 position = Vector2( 136, -96 )
 station_input_action = "station_space"
-station_input_label = "Space"
+station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
 play_wrong_sound = false
+direction = 0
 
 [node name="SpawnerGreen" parent="Map" instance=ExtResource( 5 )]
 position = Vector2( -384, -224 )

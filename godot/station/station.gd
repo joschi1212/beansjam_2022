@@ -3,6 +3,7 @@ extends Node2D
 onready var _area2d = $Area2D
 onready var _work_duration_timer = $WorkDurationTimer
 onready var _key_input = $KeyInput
+onready var _wizard_sprite : AnimatedSprite = $AnimatedSprite
 
 export(String) var station_input_action = "station_a"
 export(String) var station_input_label = "A"
@@ -10,6 +11,9 @@ export(AudioStream) var wrong_sound: AudioStream
 export(AudioStream) var success_sound: AudioStream
 
 export var play_wrong_sound : bool = true
+
+enum Direction {left, right, bottom}
+export(Direction) var direction = Direction.bottom
 
 var _working = false
 
@@ -22,6 +26,15 @@ func _ready():
 	_work_duration_timer.set_one_shot(true)
 	_work_duration_timer.connect("timeout", self, "_on_workduration_timeout")
 	audio_player = $AudioStreamPlayer
+	
+	match direction:
+		Direction.left:
+			_wizard_sprite.set_animation("side")
+			_wizard_sprite.set_flip_h(true)
+		Direction.right:
+			_wizard_sprite.set_animation("side")
+		Direction.bottom:
+			_wizard_sprite.set_animation("bottom")
 
 func _on_key_input_pressed():
 	if _working:
