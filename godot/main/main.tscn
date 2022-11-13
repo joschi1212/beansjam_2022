@@ -17,7 +17,7 @@
 
 [sub_resource type="Curve2D" id=10]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -352, -224, 0, 0, 0, 0, -352, 352, 0, 0, 0, 0, 544, 352 )
+"points": PoolVector2Array( 0, 0, 0, 0, -352, -344, 0, 0, 0, 0, -352, -184, 0, 0, 0, 0, -352, 360, 0, 0, 0, 0, 544, 360 )
 }
 
 [sub_resource type="Curve2D" id=1]
@@ -79,7 +79,7 @@ zoom = Vector2( 2, 2 )
 position = Vector2( 32, 0 )
 
 [node name="Station1" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( -456, 352 )
+position = Vector2( -456, 256 )
 station_input_action = "station_f"
 station_input_label = "F"
 wrong_sound = ExtResource( 9 )
@@ -87,21 +87,22 @@ success_sound = ExtResource( 12 )
 direction = 1
 
 [node name="Station2" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( 768, -288 )
+position = Vector2( 760, -264 )
 station_input_action = "station_d"
 station_input_label = "D"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 10 )
+direction = 1
 
 [node name="Station3" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( 256, -288 )
+position = Vector2( 352, -288 )
 station_input_action = "station_s"
 station_input_label = "S"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 8 )
 
 [node name="Station4" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( -136, 32 )
+position = Vector2( -136, -64 )
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 11 )
 direction = 1
@@ -121,15 +122,17 @@ station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
+play_sound = false
 play_wrong_sound = false
 direction = 1
 
 [node name="BStation3" parent="Map" instance=ExtResource( 7 )]
-position = Vector2( 448, -416 )
+position = Vector2( 512, -416 )
 station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
+play_sound = false
 play_wrong_sound = false
 
 [node name="BStation4" parent="Map" instance=ExtResource( 7 )]
@@ -138,11 +141,12 @@ station_input_action = "station_space"
 station_input_label = "SPC"
 wrong_sound = ExtResource( 9 )
 success_sound = ExtResource( 13 )
+play_sound = false
 play_wrong_sound = false
 direction = 0
 
 [node name="SpawnerGreen" parent="Map" instance=ExtResource( 5 )]
-position = Vector2( -384, -224 )
+position = Vector2( -384, -352 )
 assembly_line_out_path = NodePath("../GreenLines/GSegment1")
 
 [node name="SpawnerBlue" parent="Map" instance=ExtResource( 5 )]
@@ -189,8 +193,9 @@ assembly_lines_in = [ NodePath("../BlueLines/BSegment5") ]
 position = Vector2( -32, 0 )
 
 [node name="GSegment1" parent="Map/GreenLines" instance=ExtResource( 3 )]
+position = Vector2( 0, -8 )
 curve = SubResource( 10 )
-length = 23
+length = 24
 
 [node name="GSegment2" parent="Map/GreenLines" instance=ExtResource( 3 )]
 curve = SubResource( 1 )
@@ -237,7 +242,7 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -393215, 4, 0, -393214, 5, 0, -393213, 5, 0, -393212, 5, 0, -393211, 5, 0, -393210, 5, 0, -393209, 5, 0, -393208, 5, 0, -327679, 4, 0, -327672, 7, 0, -327666, 4, 0, -196609, 0, 0, -262144, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -262135, 1, 0, -262134, 1, 0, -262133, 1, 0, -262132, 1, 0, -262130, 4, 0, -131078, 0, 0, -131073, 0, 0, -196607, 4, 0, -196600, 7, 0, -196596, 3, 0, -196594, 4, 0, -65542, 0, 0, -65537, 0, 0, -131071, 4, 0, -131064, 7, 0, -131060, 3, 0, -131058, 4, 0, -6, 0, 0, -1, 0, 0, -65535, 4, 0, -65528, 7, 0, -65524, 3, 0, -65522, 4, 0, 65530, 0, 0, 65535, 0, 0, 1, 4, 0, 8, 7, 0, 12, 3, 0, 14, 4, 0, 131066, 0, 0, 131071, 2, 0, 65536, 2, 0, 65538, 2, 0, 65539, 0, 0, 65544, 7, 0, 65548, 3, 0, 65550, 4, 0, 196602, 0, 0, 131073, 4, 0, 131075, 0, 0, 131080, 7, 0, 131084, 3, 0, 131086, 4, 0, 262138, 0, 0, 196609, 4, 0, 196611, 0, 0, 196616, 7, 0, 196620, 3, 0, 196622, 4, 0, 327674, 0, 0, 262145, 4, 0, 262147, 0, 0, 262152, 7, 0, 262156, 3, 0, 262158, 4, 0, 393210, 2, 0, 393211, 2, 0, 393212, 2, 0, 393213, 2, 0, 393214, 2, 0, 393215, 2, 0, 327680, 2, 0, 327681, 2, 0, 327682, 2, 0, 327683, 2, 0, 327684, 2, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 3, 0, 327694, 4, 0, 393217, 4, 0, 393219, 0, 0, 393224, 7, 0, 393230, 4, 0, 458753, 6, 0, 458754, 6, 0, 458755, 0, 0, 458756, 6, 0, 458757, 4, 0, 458760, 7, 0, 458766, 4, 0, 524293, 4, 0, 524296, 7, 0, 524302, 4, 0, 589829, 5, 0, 589832, 7, 0, 589833, 5, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 5, 0 )
+tile_data = PoolIntArray( -393215, 4, 0, -393214, 5, 0, -393213, 5, 0, -393212, 5, 0, -393211, 5, 0, -393210, 5, 0, -393209, 5, 0, -393208, 5, 0, -262150, 0, 0, -327679, 4, 0, -327672, 7, 0, -327666, 4, 0, -196614, 0, 0, -196609, 0, 0, -262144, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -262135, 1, 0, -262134, 1, 0, -262133, 1, 0, -262132, 1, 0, -262130, 4, 0, -131078, 0, 0, -131073, 0, 0, -196607, 4, 0, -196600, 7, 0, -196596, 3, 0, -196594, 4, 0, -65542, 0, 0, -65537, 0, 0, -131071, 4, 0, -131064, 7, 0, -131060, 3, 0, -131058, 4, 0, -6, 0, 0, -1, 0, 0, -65535, 4, 0, -65528, 7, 0, -65524, 3, 0, -65522, 4, 0, 65530, 0, 0, 65535, 0, 0, 1, 4, 0, 8, 7, 0, 12, 3, 0, 14, 4, 0, 131066, 0, 0, 131071, 2, 0, 65536, 2, 0, 65538, 2, 0, 65539, 0, 0, 65544, 7, 0, 65548, 3, 0, 65550, 4, 0, 196602, 0, 0, 131073, 4, 0, 131075, 0, 0, 131080, 7, 0, 131084, 3, 0, 131086, 4, 0, 262138, 0, 0, 196609, 4, 0, 196611, 0, 0, 196616, 7, 0, 196620, 3, 0, 196622, 4, 0, 327674, 0, 0, 262145, 4, 0, 262147, 0, 0, 262152, 7, 0, 262156, 3, 0, 262158, 4, 0, 393210, 2, 0, 393211, 2, 0, 393212, 2, 0, 393213, 2, 0, 393214, 2, 0, 393215, 2, 0, 327680, 2, 0, 327681, 2, 0, 327682, 2, 0, 327683, 2, 0, 327684, 2, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 3, 0, 327694, 4, 0, 393217, 4, 0, 393219, 0, 0, 393224, 7, 0, 393230, 4, 0, 458753, 6, 0, 458754, 6, 0, 458755, 0, 0, 458756, 6, 0, 458757, 4, 0, 458760, 7, 0, 458766, 4, 0, 524293, 4, 0, 524296, 7, 0, 524302, 4, 0, 589829, 5, 0, 589832, 7, 0, 589833, 5, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 5, 0 )
 
 [node name="Background" type="Node2D" parent="."]
 position = Vector2( 32, 0 )

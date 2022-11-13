@@ -10,6 +10,7 @@ export(String) var station_input_label = "A"
 export(AudioStream) var wrong_sound: AudioStream
 export(AudioStream) var success_sound: AudioStream
 
+export var play_sound : bool = true
 export var play_wrong_sound : bool = true
 
 enum Direction {left, right, bottom}
@@ -46,7 +47,8 @@ func _on_key_input_pressed():
 	for item_area in _area2d.get_overlapping_areas():
 		var item = item_area.get_parent()
 		item.start_next_step_upgrade()
-		audio_player.play_sound(success_sound)
+		if play_sound:
+			audio_player.play_sound(success_sound)
 	
 	_working = true
 	_work_duration_timer.set_wait_time(Global.eighth_note_duration)

@@ -1,6 +1,6 @@
 extends Node
 
-export(int) var bpm = 60
+export(int) var bpm = 80
 var bps = bpm / 60.0
 
 func _ready():
