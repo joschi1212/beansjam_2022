@@ -32,6 +32,12 @@ config/windows_native_icon="res://icon.ico"
 Events="*res://public/events.gd"
 Global="*res://public/global.gd"
 
+[display]
+
+window/dpi/allow_hidpi=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [global]
 
 linea=false
