@@ -42,6 +42,6 @@ visible = false
 texture = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 2, 2 )
+scale = Vector2( 2, 2.75 )
 z_index = 2
 frames = SubResource( 7 )
