@@ -1,13 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://station/key_input.gd" type="Script" id=1]
-
-[sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0, 0.56383, 1 )
-colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
-
-[sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
+[ext_resource path="res://assets/Sphere.png" type="Texture" id=2]
 
 [sub_resource type="DynamicFontData" id=4]
 font_path = "res://assets/PixgamerRegular-PKxO2.ttf"
@@ -20,9 +14,9 @@ font_data = SubResource( 4 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -9.53674e-07, -9.53674e-07 )
-scale = Vector2( 0.0390625, 80 )
-texture = SubResource( 2 )
+position = Vector2( -8.58307e-06, -3.8147e-06 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
 
 [node name="KeyInfo" type="Label" parent="."]
 margin_left = -40.0

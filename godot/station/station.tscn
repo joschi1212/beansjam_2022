@@ -33,7 +33,8 @@ frames = SubResource( 2 )
 animation = "front"
 
 [node name="KeyInput" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, -72 )
+position = Vector2( 0, -80 )
+scale = Vector2( 0.8, 0.8 )
 z_index = 1
 z_as_relative = false
 
